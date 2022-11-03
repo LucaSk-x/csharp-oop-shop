@@ -3,10 +3,10 @@ Console.WriteLine("Hello, World!");
 
 Prodotto prodottoNuovo = new Prodotto(1000, "gioco", "gioco molto divertente", 100, 22);
 
-Console.WriteLine("Il prezzo compreso senza Iva è: " + prodottoNuovo.getPrezzo() + "€");
-Console.WriteLine("Il prezzo compreso di Iva è: " + prodottoNuovo.prezzoIntero() + "€");
+Console.WriteLine("Il prezzo compreso senza Iva è: " + prodottoNuovo.Prezzo);
+Console.WriteLine("Il prezzo compreso di Iva è: " + prodottoNuovo.prezzoIntero());
 
-Console.WriteLine("Il nome del prodotto è: " + prodottoNuovo.getNome());
+Console.WriteLine("Il nome del prodotto è: " + prodottoNuovo.Nome);
 Console.WriteLine("Il nome del prodotto completo è: " + prodottoNuovo.nomeIntero());
 
 Console.WriteLine("Il codice del prodotto completo è: " + prodottoNuovo.addPad());
@@ -30,54 +30,24 @@ public class Prodotto
     }
 
     //Codice del prodotto
-    public int getCodice()
-    {
-        return this.codice;
-    }
+    public int Codice { get;}
 
     //Nome del prodotto
-    public string getNome()
-    {
-        return this.nome;
-    }
+    public string Nome { get; set; }
 
-    public string setNome()
-    {
-        return this.nome = nome;
-    }
 
     //Descrizione del prodotto
-    public string getDescrizione()
-    {
-        return this.descrizione;
-    }
+    public string Descrizione { get; set; }
 
-    public string setDescrizione()
-    {
-        return this.descrizione = descrizione;
-    }
 
-    //Prezzo del pprodotto
-    public double getPrezzo()
-    {
-        return this.prezzo;
-    }
+    //Prezzo del prodotto
+    public double Prezzo { get; set; }
 
-    public double setPrezzo()
-    {
-        return this.prezzo = prezzo;
-    }
 
     //Iva del prodotto
-    public int getIva()
-    {
-        return this.iva;
-    }
+    public int Iva { get; set; }
 
-    public double setIva()
-    {
-        return this.iva = iva;
-    }
+
 
     public double prezzoIntero()
     {
